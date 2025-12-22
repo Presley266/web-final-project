@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         const sp = document.getElementById("openAni");
         if (sp) sp.remove();
-    }, 3000);
+    }, 2600);
 });
 
 // 自动轮播
@@ -23,7 +23,6 @@ function slideShow(){
 setInterval(slideShow,1600);
 
 // 音乐卡片
-
 document.querySelectorAll(".music-card").forEach(card => {
     let state = 0;
     const title = card.querySelector(".card-title");
@@ -40,8 +39,6 @@ document.querySelectorAll(".music-card").forEach(card => {
     });
 });
 
-
-
 // 留言墙
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('msgForm');
@@ -50,14 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault(); // 阻止页面刷新（核心）
-
         const text = input.value.trim();
         if (!text) return;
-
         const div = document.createElement('div');
         div.className = 'item';
         div.textContent = text;
-
         wall.prepend(div);
         input.value = '';
     });

@@ -116,6 +116,9 @@ li,a{
     width: 100%;
     text-align: center;
 }
+.nav .logo img{
+    border-radius: 100%;
+}
 .nav .name{
     font-size: 50px;
     color: #E8F5E9;
@@ -236,12 +239,6 @@ li,a{
 .audio .mv_img {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
-.audio .up,
-.audio .down {
-    display: flex;
-    gap: 20px;
 }
 .audio .mv {
     position: relative;
