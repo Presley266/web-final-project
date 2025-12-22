@@ -3,9 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>藤井风</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    
+    <!-- 开屏动画 -->
+     <section id="openAni">
+        <img id="cute" src="img/cute.png" width="200px" height="360px">
+     </section>
+
+    <!-- 首页（自动轮播） -->
+     <section class="home" id="home">
+        <div id="slideshow">
+            <img class="img-slide img" src="/img/bg0.jpg">
+            <img class="img-slide img" src="/img/bg1.jpg">
+            <img class="img-slide img" src="/img/bg2.jpg">
+            <img class="img-slide img" src="/img/bg3.jpg">
+        </div>
+     </section>
+
+    <!-- 左侧固定导航栏 -->
+     <div class="nav">
+        <ul>
+            <li class="name">李敏睿</li>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#intro">介绍</a></li>
+            <li><a href="#music-card">音乐卡片</a></li>
+            <li><a href="#audio">歌曲MV</a></li>
+            <li><a href="#timeline">时间线</a></li>
+            <li><a href="#message">留言墙</a></li>
+        </ul>
+     </div>
+
+    <!-- 介绍（单图 + 文字介绍） -->
+     <section class="intro" id="intro">
+        <h1>个人介绍</h1>
+        <img src="img/intro.jpg">
+        <div class="content">
+            <div>
+                <h2>藤井風</h2>
+                <p>
+                    日本新生代极具代表性的创作型歌手、词曲作者与钢琴演奏者，出生于冈山县。
+                    自幼学习钢琴，早期通过在网络平台翻弹中外歌曲受到关注，随后逐渐转向原创音乐创作，
+                    并以鲜明的个人风格进入主流音乐视野。
+                </p>
+                <p>
+                    藤井风的音乐以钢琴为核心，融合流行、爵士、灵魂乐等元素，
+                    旋律结构简洁但情绪表达细腻，强调情感的自然流动而非复杂编排。
+                    他的歌词多关注自我认知、成长、情绪释放与人与人之间的关系，
+                    具有较强的共鸣性与当代性。
+                </p>
+                <p>
+                    其代表作品包括《何なんw》《きらり（Kirari）》《まつり（Matsuri）》《ガーデン（Garden）》等，
+                    这些作品在日本及海外音乐平台上获得了较高的播放量与讨论度。
+                    其中，《きらり》与《まつり》在发行后广泛传播，
+                    进一步巩固了他在年轻听众群体中的影响力。
+                </p>
+                <p>
+                    在奖项方面，藤井风曾获得多项日本主流音乐奖项肯定，
+                    包括日本唱片大奖相关奖项、日本金唱片大奖等，
+                    其专辑与单曲也多次进入各类音乐榜单。
+                    他的作品不仅在商业成绩上表现稳定，
+                    也在音乐性与艺术表达层面获得了较高评价。
+                </p>
+                <p>
+                    藤井风以“真实、自我、不刻意迎合”为创作核心，
+                    通过音乐建立起鲜明而持续的个人风格。
+                    这种兼具艺术性与大众接受度的创作方式，
+                    使他成为近年来日本流行音乐中具有研究与展示价值的代表性音乐人之一。
+                </p>
+            </div>
+        </div>
+     </section>
+
+    <!-- 音乐卡片 -->
+    <section class="music-card-container" id="music-card">
+        <h1>音乐卡片</h1>
+
+        <div class="cards">
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">きらり</div>
+                    <div class="cn">闪耀</div>
+                </div>
+                <div class="card-lyric">
+                    <b>色々見てきたけれどこの瞳は永遠に　きらり</b>
+                    <p>看遍婆娑世界 这双眼睛也永远澄澈明亮</p>
+                    <b>永遠に　きらり</b>
+                    <p>永远 闪烁着光</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">まつり</div>
+                    <div class="cn">祭典</div>
+                </div>
+                <div class="card-lyric">
+                    <b>あれもこれもが有り難し</b>
+                    <p>再细微的小事都值得感谢</p>
+                    <b>苦しむことは何もない</b>
+                    <p>无需自我煎熬</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">やば。</div>
+                    <div class="cn">糟糕</div>
+                </div>
+                <div class="card-lyric">
+                    <b>さっさと行こうか</b>
+                    <p>抓紧时机 就此启程吧</p>
+                    <b>もっと遠くへ高いとこまで</b>
+                    <p>直到更高远的地方</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">ガーデン</div>
+                    <div class="cn">花园</div>
+                </div>
+                <div class="card-lyric">
+                    <b>それでも守り続けたくて</b>
+                    <p>即便如此依然想继续守护</p>
+                    <b>私のガーデン果てるまで</b>
+                    <p>直到我的花园 盛开结果</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">青春病</div>
+                    <div class="cn">青春病</div>
+                </div>
+                <div class="card-lyric">
+                    <b>いつの日か粉になって散るだけ</b>
+                    <p>将来终会化为粉末消失殆尽</p>
+                    <b>青春はどどめ色</b>
+                    <p>青春是淤青色</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">花</div>
+                    <div class="cn">花</div>
+                </div>
+                <div class="card-lyric">
+                    <b>わたしは何になろうか</b>
+                    <p>我要成为怎样的花呢</p>
+                    <b>どんな色がいいかな</b>
+                    <p>什么颜色能描绘出我呢</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">満ちてゆく</div>
+                    <div class="cn">满溢</div>
+                </div>
+                <div class="card-lyric">
+                    <b>何もないけれど全て差し出すよ</b>
+                    <p>虽然一无所有 但我会献上一切</p>
+                    <b>手を放す、軽くなる、満ちてゆく</b>
+                    <p>放开双手，身体轻盈，逐渐满溢</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <div class="card-title">
+                    <div class="jp">真っ白</div>
+                    <div class="cn">纯白</div>
+                </div>
+                <div class="card-lyric">
+                    <b>真っ⿊なところはぶち抜かれ</b>
+                    <p>黑暗阴影啊 已被击穿</p>
+                    <b>真新しい⾵にまた抱かれた</b>
+                    <p>全新风儿啊把我拥抱</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 歌曲MV -->
+     <section class="audio" id="audio">
+        <h1>歌曲MV</h1>
+        <div class="mv_img">
+            <div class="up">
+                <a href="https://www.bilibili.com/video/BV1Dj411Z75c" class="mv"><img src="img/up1.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV1X94y1q7oD" class="mv"><img src="img/up2.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV19N411m7uU" class="mv"><img src="img/up3.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV1dh4y1Z7ec" class="mv"><img src="img/up4.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV1fk4y1P7ek" class="mv"><img src="img/up5.jpg"></a>
+            </div>
+            <div class="down">
+                <a href="https://www.bilibili.com/video/BV1MC4y1N7Q6" class="mv"><img src="img/down1.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV1Mx4y1D7Y7" class="mv"><img src="img/down2.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV1cX4y1v7An" class="mv"><img src="img/down3.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV1dM4y1j73m" class="mv"><img src="img/down4.jpg"></a>
+                <a href="https://www.bilibili.com/video/BV1Zg4y1w7f2" class="mv"><img src="img/down5.jpg"></a>
+            </div>
+        </div>
+     </section>
+
+    <!-- 时间线 -->
+<section class="timeline" id="timeline">
+    <h1>时间线</h1>
+
+    <div class="line">
+
+        <div class="event">
+            <h3>1997–2018｜童年与早期</h3>
+            <p>
+                1997年出生于冈山县，自幼学习钢琴与萨克斯管。
+                小学毕业后在父亲建议下开设 YouTube 频道，发布钢琴翻弹作品。
+                高中就读音乐科，逐渐确立成为歌手的目标。
+                2018年因网络人气上升，开始受到音乐业界关注。
+            </p>
+        </div>
+
+        <div class="event">
+            <h3>2019｜正式出道</h3>
+            <p>
+                2019年前往东京发展，频繁参与音乐节演出。
+                同年发行首张数字单曲《何なんw》正式出道。
+                2020年推出首张专辑《HELP EVER HURT NEVER》，
+                登上 Oricon 与 Billboard 日本榜单前列。
+            </p>
+        </div>
+
+        <div class="event">
+            <h3>2021｜人气爆发</h3>
+            <p>
+                多首歌曲成为影视与广告主题曲。
+                《Kirari》大热，串流播放量突破数亿次。
+                举办大型免费线上演唱会，全球关注度急速上升。
+                年底首次登上 NHK 红白歌会。
+            </p>
+        </div>
+
+        <div class="event">
+            <h3>2022｜第二张专辑</h3>
+            <p>
+                发行第二张专辑《Love All Serve All》，
+                登顶 Billboard 日本专辑榜。
+                获得文部科学大臣新人奖等多项音乐大奖。
+                国际影响力持续扩大。
+            </p>
+        </div>
+
+        <div class="event">
+            <h3>2023｜国际舞台</h3>
+            <p>
+                展开首次亚洲巡演，全程钢琴独奏形式演出。
+                单曲《Workin’ Hard》成为篮球世界杯主题曲。
+                藤井风的音乐开始被全球主流市场关注。
+            </p>
+        </div>
+
+        <div class="event">
+            <h3>2024｜大型演唱会</h3>
+            <p>
+                举办日本体育场级别演唱会，线上线下观众破百万。
+                发行精选专辑，总结出道以来的重要作品。
+                正式签约国际唱片公司，迈向全球发展。
+            </p>
+        </div>
+
+        <div class="event">
+            <h3>2025｜全新阶段</h3>
+            <p>
+                发行第三张录音室专辑《Prema》，
+                为首张英文专辑，标志国际化新阶段。
+                持续活跃于全球音乐舞台。
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="message" id="message">
+    <h1>留言墙</h1>
+    <div class="left">
+        <form id="msgForm">
+            <textarea id="msgInput" placeholder="请输入留言..." required></textarea>
+            <button type="submit" id="sendBtn">发布</button>
+        </form>
+    </div>
+
+    <div class="right">
+        <div id="wall"></div>
+    </div>
+</section>
+<div class="footer">&copy; 2025 藤井風主题网站</div>
+
+<script src="./js/logic.js"></script> 
 </body>
 </html>
