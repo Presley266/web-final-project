@@ -2,18 +2,18 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 设置盒模型为border-box，使宽度和高度包含边框和内边距 */
 }
 html,body{
     height: 100%;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;/* 启用平滑滚动效果，点击锚链接时页面平滑滚动 */
 }
 li,a{
     text-decoration: none;
     list-style: none;
 }
 :root{
-    --nav-width: 245px; /*  */
+    --nav-width: 245px; /* 定义CSS变量，存储导航栏宽度，便于全局统一管理 */
 }
 .home,
 .intro,
@@ -21,10 +21,11 @@ li,a{
 .audio,
 .timeline,
 .message {
+    height: 100vh;
     margin-left: var(--nav-width);
-    width: calc(100% - var(--nav-width));
+    width: calc(100% - var(--nav-width));/* 计算宽度为100%视口宽度减去导航栏宽度 */
     position: relative;
-    padding-top: 80px;
+    padding-top: 80px;/* 设置顶部内边距，为区域标题预留空间 */
 }
 .home h1,
 .intro h1,
@@ -35,42 +36,38 @@ li,a{
     position: absolute;
     top: 30px;
     left: 40px;
-    font-weight: 700;
-    margin: 0;
 }
 
 /* 开屏动画 */
 #openAni {
-    position: fixed;
-    inset: 0;
+    position: fixed;/* 设置为固定定位，始终相对于视口定位 */
+    inset: 0;/* 同时设置top、right、bottom、left为0，覆盖整个视口 */
     background: #f6f3ff;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    animation: Over 0.8s ease forwards;
-    animation-delay: 1.8s;
+    z-index: 9999;/* 设置优先级，确保在最顶层显示 */
+    animation: Over 0.8s ease forwards;/* 持续0.8秒，缓动函数为ease，保持最终状态 */
+    animation-delay: 1.8s;/* 设置动画在启动前的延迟间隔 */
     pointer-events: none;
 }
 #cute {
     width: 180px;
-    transform-origin: center 70%;
-    animation: characterShake 1s linear infinite;
+    transform-origin: center 70%;/* 设置变换原点为水平居中，垂直方向70%位置，qq人腿部位置 */
+    animation: characterShake 1s linear infinite;/* 持续1秒，线性变化，无限循环 */
 }
 @keyframes characterShake {
-    0% { transform: rotate(-15deg); }
-    50% { transform: rotate(15deg); }
-    100% { transform: rotate(-15deg); }
+    0% { transform: rotate(-15deg); }/* 起始：逆时针旋转15度 */
+    50% { transform: rotate(15deg); }/* 中间：顺时针旋转15度 */
+    100% { transform: rotate(-15deg); }/* 结束：回到起始状态，逆时针旋转15度 */
 }
 @keyframes Over {
-    from { opacity: 1; }
-    to   { opacity: 0; visibility: hidden; }
+    from { opacity: 1; }/* 起始：不透明 */
+    to   { opacity: 0; visibility: hidden; }/* 结束：变透明且设置为隐藏 */
 }
 
 /* 首页轮播样式 */
 .home {
-    height: 100vh;
-    width: calc(100% - 245px);
     position: relative;
     overflow: hidden;
 }
@@ -79,7 +76,6 @@ li,a{
     height: 100%;
     position: absolute;
     inset: 0;
-    z-index: -1;
 }
 .img-slide {
     position: absolute;
@@ -87,13 +83,13 @@ li,a{
     left: 0;
     width: 100%;
     height: 100%;
-    display: none;
+    display: none;/* 默认隐藏所有图片，通过js控制显示哪一张 */
 }
 .img-slide.img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: cover; /* 图片缩放以填充整个容器，保持宽高比，可能被裁剪 */
+    object-position: center; /* 图片在容器中居中显示 */
 }
 
 /* 左侧导航样式 */
@@ -104,7 +100,7 @@ li,a{
     width: var(--nav-width);
     height: 100vh;
     background-color: rgba(20, 20, 20, 0.6);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);/* 应用背景模糊效果，模糊半径为12px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +121,7 @@ li,a{
     font-family: KaiTi;
 }
 .nav li a{
-    display: block;
+    display: block;/* 将链接设置为块级元素，占据整行 */
     color: rgba(255,255,255,0.85);
     padding: 20px 0;
     font-size: 26px;
@@ -136,22 +132,16 @@ li,a{
 
 /* 人物介绍 */
 .intro {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #f0ede6;
     color: #333;
 }
-.intro .content h1{
-    align-items: center;
-}
 .intro .content {
     max-width: 600px;
     width: 50%;
     padding: 0 100px;
-    gap: 40px;
-    flex-wrap: wrap;
 }
 .intro img {
     max-width: 420px;
@@ -164,8 +154,6 @@ li,a{
 .music-card-container {
     position: relative;
     padding: 60px 10px 10px 10px;
-    width: calc(100% - 245px);
-    height: 100vh;
     overflow: hidden;
 }
 .music-card-container h1 {
@@ -177,18 +165,18 @@ li,a{
 .cards {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: wrap; /* 允许子元素换行显示 */
+    gap: 10px; /* 设置子元素之间的间距为10px */
     align-content: flex-start; /* 让卡片从顶部开始排列 */
 }
 .music-card {
-    width: calc(50% - 5px); /* 两列 */
+    width: calc(50% - 5px); /* 计算宽度为50%容器宽度减去5px（考虑gap间距） */
     height: 180px;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer;/* 鼠标悬停时显示手形指针，表示可点击 */
 }
 
 /* :nth-child 是一个 CSS 伪类选择器，用于选择父元素的第 n 个子元素，支持多种匹配模式 */
@@ -205,49 +193,42 @@ li,a{
 
 .card-title,
 .card-lyric {
-    display: none;
+    display: none;/* 默认隐藏卡片标题和歌词区域，通过js交互显示 */
 }
 
 .card-title .jp {
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 700;/* 设置字体加粗程度为700（粗体） */
 }
 .card-title .cn {
     font-size: 18px;
-    opacity: 0.7;
+    opacity: 0.7;/* 设置70%不透明度*/
     margin-top: 4px;
 }
 
 .card-lyric p {
     margin: 4px 0;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.4;/* 设置行高为字体大小的1.4倍 */
 }
 
 /* 歌曲MV */
 .audio {
-    height: 100vh;
     background: #f0ede6;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-.audio h1 {
-    margin: 0 0 40px 0;
-    font-weight: 400;
 }
 .audio .mv_img {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* 启用弹性盒布局 */
+    flex-direction: column; /* 设置主轴方向为垂直方向 */
 }
 .audio .mv {
     position: relative;
-    display: inline-block;
-    flex-shrink: 0;
+    display: inline-block;/* 设置为行内块级元素 */
+    flex-shrink: 0;/* 禁止元素收缩，保持原始尺寸 */
 }
 .audio .mv img {
     height: 260px;
-    display: block;
+    display: block;/* 将图片设置为块级元素 */
 }
 /* 黑色遮罩 */
 .audio .mv::before {
@@ -256,7 +237,7 @@ li,a{
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;/* 设置透明度过渡效果，持续0.3秒，缓动函数为ease */
 }
 /* 播放按钮 */
 .audio .mv::after {
@@ -264,22 +245,21 @@ li,a{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);/* 向左和向上平移自身宽高的50%，实现完全居中 */
     font-size: 60px;
     color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    opacity: 0;/* 初始状态完全透明 */
+    transition: opacity 0.3s ease;/* 设置透明度过渡效果，持续0.3秒，缓动函数为ease */
     pointer-events: none;
 }
 /* 悬停显示 */
 .audio .mv:hover::before,
 .audio .mv:hover::after {
-    opacity: 1;
+    opacity: 1;/* 鼠标悬停时完全不透明，显示遮罩和播放按钮 */
 }
 
 /* 时间线 */
 .timeline {
-    height: 100vh;
     padding: 60px;
     background: #f0ede6;
     color: #333;
@@ -298,7 +278,6 @@ li,a{
 
 /* 留言墙 */
 .message {
-    height: 100vh;
     background: #f0ede6;
     display: flex;
     gap: 40px;
