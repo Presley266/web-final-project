@@ -279,8 +279,6 @@ li,a{
 /* 留言墙 */
 .message {
     background: #f0ede6;
-    display: flex;
-    gap: 40px;
 }
 
 .message .left,
@@ -292,42 +290,38 @@ li,a{
 .message .left {
     width: 300px;
     height: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     padding-left: 15px;
+    float: left;
 }
 
 #msgForm {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     height: 100%;
+    gap: 10px;
 }
 
 #msgInput {
-    flex: 1;
+    flex: 1;/* 弹性因子为1，占据剩余可用空间 */
     padding: 12px 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    resize: none;
-    outline: none;
-    font-size: 14px;
+    resize: none;/* 禁止用户调整文本框大小 */
+    font-size: 20px;
 }
 
-#msgInput:focus {
+#msgInput:hover {
     border-color: #999;
 }
 
 #sendBtn {
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px;
     color: #fff;
     background-color: #999;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    cursor: pointer;/* 鼠标悬停时显示手形指针，表示可点击 */
 }
 
 #sendBtn:hover {
@@ -337,7 +331,8 @@ li,a{
 /* 右侧留言墙 */
 .message .right {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: auto;/* 垂直方向内容溢出时显示滚动条 */
+    float: right;
 }
 
 #wall {
@@ -351,14 +346,14 @@ li,a{
     padding: 12px 15px;
     border-radius: 8px;
     font-size: 14px;
-    line-height: 1.5;
-    word-break: break-word;
+    line-height: 1.5;/* 设置行高为字体大小的1.5倍 */
+    word-break: break-word;/* 长单词或URL在必要时换行，避免溢出容器 */
 }
 
 .footer {
-    text-align: center;
+    text-align: center; /* 文本水平居中 */
     padding: 10px 0;
-    font-size: 12px;
+    font-size: 15px;
     color: #555;
     background-color: #e8e3d8;
 }
