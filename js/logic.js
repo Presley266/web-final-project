@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const sp = document.getElementById("openAni");
         // 如果元素已经存在则删除
         if (sp) sp.remove();
-    }, 2600);// 设置2.6秒的延时
+    }, 10000);// 设置2.6秒的延时
 });
 
 // 自动轮播
