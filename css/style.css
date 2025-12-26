@@ -120,6 +120,11 @@ li,a{
     color: #E8F5E9;
     font-family: KaiTi;
 }
+.nav .id{
+    font-size: 35px;
+    color: #E8F5E9;
+    font-family: KaiTi;
+}
 .nav li a{
     display: block;/* 将链接设置为块级元素，占据整行 */
     color: rgba(255,255,255,0.85);
